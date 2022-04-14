@@ -1,0 +1,70 @@
+<div class="container">
+    <h1 class="text-center text-warning mt-4 mb-4">La Liste de mes produits : {{products.length}}</h1>
+
+
+    <div class="row">
+        <div class="col-6 shadow p-3 mb-5 bg-white rounded">
+            <h5 class="text-primary text-center">Chercher par prix</h5>
+            <!-- début formulaire trix par prix  -->
+            <form class=" text-center justify-content-center">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Entrer le prix min">
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Entrer le prix max">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <button type="submit" class="btn btn-primary bg-success">Filtrer</button>
+                    </div>
+                </div>
+              </form>
+            <!-- fin formulaire trix par prix  -->
+        </div>
+        <div class="col-6 shadow p-3 mb-5 bg-white rounded">
+            <h5 class="text-primary text-center">Chercher par mot clé</h5>
+            <!-- début formulaire trix par mot clé  -->
+            <form class=" text-center justify-content-center">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Entrer un mot clé">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary bg-success">Filtrer</button>
+                        </div>
+                    </div>
+                </div>
+              </form>
+            <!-- fin formulaire trix par mot clé  -->
+        </div>
+    </div>
+
+    <section class="row">
+        <div class="text-center ml-4 mb-4 pl-4 pb-4 bg-success" *ngIf="afficher">
+            Le produit est suprimé
+        </div>
+        <div class="col-3" *ngFor="let p of products">
+            <img src="{{p.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{p.title}}</h5>
+
+                <span class="card-text text-info">Disponible : </span>
+                <span id="span1" class="card-text fa-solid fa-dragon" 
+                [ngClass]="{'text-success': p.available, 'text-danger': !p.available}"
+                (click)="changeDisponible(p)"></span>
+
+                <p class="card-text">{{p.description}}</p>
+                <a href="#" class="btn btn-primary">{{p.price}} €</a>
+                <button class="bg-danger" (click)="supprimer(p.id)">Suprimer</button>
+            </div>
+        </div>
+    </section>
+
+</div>
