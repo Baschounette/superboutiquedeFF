@@ -61,8 +61,19 @@
                 (click)="changeDisponible(p)"></span>
 
                 <p class="card-text">{{p.description}}</p>
-                <a href="#" class="btn btn-primary">{{p.price}} €</a>
-                <button class="bg-danger" (click)="supprimer(p.id)">Suprimer</button>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="#" class="btn btn-primary">{{p.price}} €</a>
+                    </div>
+                    <div class="col-4">
+                        <p> </p>
+                    </div>
+                    <div class="col-2">
+                        <button class="bg-danger text-white" (click)="supprimer(p.id)">Suprimer</button>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </section>
