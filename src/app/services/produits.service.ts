@@ -27,4 +27,8 @@ export class ProduitsService {
     let max = search.value.max;
     return this.http.get("http://localhost:3000/product?price_gte="+min+"&price_lte="+max)
   }
+  jeChercheMotCle(search1: any) {
+    let key = search1.value.key;
+    return this.http.get("http://localhost:3000/product?q="+key)
+  }
 }

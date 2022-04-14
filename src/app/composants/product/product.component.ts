@@ -43,6 +43,11 @@ export class ProductComponent implements OnInit {
       console.log(search.value)
     })
   }
-
+  chercheMotCle(search1: any) {
+    this.ps.jeChercheMotCle(search1).subscribe(data =>{
+      this.products = data
+      console.log(search1.value)
+    })
+  }
 
 }

@@ -28,11 +28,11 @@
         <div class="col-6 shadow p-3 mb-5 bg-white rounded">
             <h5 class="text-primary text-center">Chercher par mot clé</h5>
             <!-- début formulaire trix par mot clé  -->
-            <form class=" text-center justify-content-center">
+            <form class=" text-center justify-content-center" (ngSubmit)="chercheMotCle(search1)" #search1="ngForm">
                 <div class="row">
                     <div class="col-10">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Entrer un mot clé">
+                            <input type="text" class="form-control" name="key" ngModel placeholder="Entrer un mot clé">
                         </div>
                     </div>
                     <div class="col-2">
