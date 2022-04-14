@@ -22,5 +22,9 @@ export class ProduitsService {
     let available = produit.available;
     return this.http.patch("http://localhost:3000/product/"+produit.id, {available: !available})
   }
-
+  jeCherchePrix(search: any) {
+    let min = search.value.min;
+    let max = search.value.max;
+    return this.http.get("http://localhost:3000/product?price_gte="+min+"&price_lte="+max)
+  }
 }

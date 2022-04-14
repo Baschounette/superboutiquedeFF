@@ -6,16 +6,16 @@
         <div class="col-6 shadow p-3 mb-5 bg-white rounded">
             <h5 class="text-primary text-center">Chercher par prix</h5>
             <!-- début formulaire trix par prix  -->
-            <form class=" text-center justify-content-center">
+            <form class=" text-center justify-content-center" (ngSubmit)="cherchePrix(search)" #search="ngForm">
                 <div class="row">
                     <div class="col-5">
                         <div class="form-group">
-                            <input type="number" class="form-control" placeholder="Entrer le prix min">
+                            <input type="number" class="form-control" name="min" ngModel placeholder="Entrer le prix min">
                         </div>
                     </div>
                     <div class="col-5">
                         <div class="form-group">
-                            <input type="number" class="form-control" placeholder="Entrer le prix max">
+                            <input type="number" class="form-control" name="max" ngModel placeholder="Entrer le prix max">
                         </div>
                     </div>
                     <div class="col-2">

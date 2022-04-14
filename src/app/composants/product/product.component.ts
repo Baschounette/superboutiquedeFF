@@ -37,6 +37,12 @@ export class ProductComponent implements OnInit {
     }
     )
   }
+  cherchePrix(search: any) {
+    this.ps.jeCherchePrix(search).subscribe(data =>{
+      this.products = data
+      console.log(search.value)
+    })
+  }
 
 
 }
