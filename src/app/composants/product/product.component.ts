@@ -19,10 +19,12 @@ export class ProductComponent implements OnInit {
     price: 0,
     available: false
   };
+  isCo = this.ps.isconnected
 
   constructor(private ps: ProduitsService, private router:Router) { }
 
   ngOnInit(): void {
+    this.isCo
     this.getProduits()
   }
 

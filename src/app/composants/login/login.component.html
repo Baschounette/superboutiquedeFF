@@ -5,14 +5,14 @@
     <div class="bg-danger p-4 text-white m-auto text-center" *ngIf="message">Identifiants incorrects !</div>
 
     <form (ngSubmit)="login(login1)" #login1="ngForm">
-        <div class="form-group mt-2">
+        <div class="form-group m-auto text-center col-4">
             <input type="text" class="form-control" name="username" placeholder="Nom" ngModel required>
         </div>
-        <div class="form-group mt-2">
+        <div class="form-group m-auto text-center col-4">
             <input type="password" class="form-control" name="password" placeholder="Mot de passe" ngModel required>
         </div>
-
-        <button type="submit" class="btn btn-primary mt-4">Se connecter</button>
+        <p></p>
+        <button type="submit" class="btn btn-primary m-auto text-center col-4">Se connecter</button>
     </form>
 
 </div>

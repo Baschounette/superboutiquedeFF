@@ -6,6 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class ProduitsService {
 
+  isconnected = false;
+
   constructor(private http:HttpClient) { }
 
   getProduits() {

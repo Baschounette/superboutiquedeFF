@@ -67,7 +67,7 @@
                     </div>
                     <div class="col-4">
                         <!-- Button trigger modal -->
-                        <button type="button" class="bg-warning text-white btn btn-primary" (click)="modifierProduit(p)" data-toggle="modal" data-target="#modifier">
+                        <button type="button" class="bg-warning text-white btn btn-primary" (click)="modifierProduit(p)" data-toggle="modal" data-target="#modifier" *ngIf="isCo">
                             Modifier
                         </button>
                         
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <div class="col-3">
-                        <button class="bg-danger text-white btn btn-primary" (click)="supprimer(p.id)">Suprimer</button>
+                        <button class="bg-danger text-white btn btn-primary" (click)="supprimer(p.id)" *ngIf="isCo">Suprimer</button>
                     </div>
                 </div>
 
