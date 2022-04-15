@@ -9,6 +9,16 @@ import { ProduitsService } from 'src/app/services/produits.service';
 export class ProductComponent implements OnInit {
   products:any;
   afficher:boolean = false;
+
+  modifier = {
+    id: 0,
+    title: "",
+    description: "",
+    image: "",
+    price: 0,
+    available: false
+  };
+
   constructor(private ps: ProduitsService) { }
 
   ngOnInit(): void {
@@ -49,5 +59,18 @@ export class ProductComponent implements OnInit {
       console.log(search1.value)
     })
   }
+
+  modifierProduit(product: any) {
+      this.modifier = product
+    }
+    
+  modifProduit(modifier: any) {
+    this.ps.jeModifierProduit(modifier).subscribe(()=>{
+      console.log(this.modifier)
+    })
+  }
+    
+  
+
 
 }

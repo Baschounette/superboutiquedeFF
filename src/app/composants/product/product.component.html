@@ -66,10 +66,49 @@
                         <a href="#" class="btn btn-primary">{{p.price}} €</a>
                     </div>
                     <div class="col-4">
-                        <p> </p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="bg-warning text-white btn btn-primary" (click)="modifierProduit(p)" data-toggle="modal" data-target="#modifier">
+                            Modifier
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="modifier" tabindex="-1" role="dialog" aria-labelledby="modifierLeProduit" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title m-auto text-center text-warning" id="modifierLeProduit">Modifier le produit</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Form  -->
+                                           <form>
+                                            <div class="form-group mt-2">
+                                              <label class="text-info">Nom</label>
+                                              <input type="text" class="form-control" name='title' [(ngModel)]="modifier.title">
+                                            </div>
+                                            <div class="form-group mt-2">
+                                              <label class="text-info">Description</label>
+                                              <input type="text" class="form-control" name='description' [(ngModel)]="modifier.description">
+                                            </div>
+                                            <div class="form-group mt-2">
+                                              <label class="text-info">Image</label>
+                                              <input type="text" class="form-control" name='image' [(ngModel)]="modifier.image">
+                                            </div>
+                                            <div class="form-group mt-2">
+                                              <label class="text-info">Prix</label>
+                                              <input type="number" class="form-control" name='price' [(ngModel)]="modifier.price">
+                                            </div>
+                                          </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Retour</button>
+                                        <button type="submit" class="btn btn-primary"(click)="modifProduit(modifier)">Modifier</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <button class="bg-danger text-white" (click)="supprimer(p.id)">Suprimer</button>
+                    <div class="col-3">
+                        <button class="bg-danger text-white btn btn-primary" (click)="supprimer(p.id)">Suprimer</button>
                     </div>
                 </div>
 

@@ -31,4 +31,7 @@ export class ProduitsService {
     let key = search1.value.key;
     return this.http.get("http://localhost:3000/product?q="+key)
   }
+  jeModifierProduit(product: any) {
+    return this.http.patch("http://localhost:3000/product/"+product.id, product)
+  }
 }

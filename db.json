@@ -54,7 +54,7 @@
       "image": "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_FinalFantasyVII_image1600w.jpg",
       "price": 17,
       "id": 14,
-      "available": true
+      "available": false
     },
     {
       "title": "Final Fantasy VII Remake",
@@ -173,6 +173,14 @@
       "price": 75,
       "id": 29,
       "available": true
+    },
+    {
+      "title": "Final Fantasy Crystal Chronicles",
+      "description": "ceci est un test",
+      "image": "https://image.api.playstation.com/vulcan/img/rnd/202007/1522/xVk0OlHo2Pk29MkX71LQze64.png",
+      "price": 123,
+      "id": 30,
+      "available": false
     }
   ]
 }
