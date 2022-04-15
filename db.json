@@ -12,13 +12,13 @@
       "title": "Final Fantasy II",
       "description": "le deuxième",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1173780/capsule_616x353.jpg?t=1627491385",
-      "price": 11,
+      "price": 13,
       "id": 9,
       "available": false
     },
     {
       "title": "Final Fantasy III",
-      "description": "le troisième",
+      "description": "le troisième !ddz",
       "image": "https://hb.imgix.net/f119fa6e9df2d86976131b3448d5d3cd7af6926b.jpeg?auto=compress,format&fit=crop&h=353&w=616&s=f5d2629c170415fe0cdef8154ccf4059",
       "price": 12,
       "id": 10,
